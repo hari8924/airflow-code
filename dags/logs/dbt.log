@@ -1,0 +1,303 @@
+[0m15:20:08.038469 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c0f25e51130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c0f269b6ff0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c0f25da8230>]}
+
+
+============================== 15:20:08.040904 | be9530bd-676f-4ba8-9799-33de51df26d8 ==============================
+[0m15:20:08.040904 [info ] [MainThread]: Running with dbt=1.8.4
+[0m15:20:08.042783 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/airflow/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --select CREDITS_DIM --profile Netflix --target dev', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:20:08.043115 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/airflow/airflow-code/dags/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:20:08.043777 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.057304125, "process_user_time": 1.326617, "process_kernel_time": 0.090683, "process_mem_max_rss": "89660", "process_out_blocks": "8", "command_success": false, "process_in_blocks": "0"}
+[0m15:20:08.044162 [debug] [MainThread]: Command `dbt run` failed at 15:20:08.044068 after 0.06 seconds
+[0m15:20:08.044403 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c0f280e5370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c0f25f4d310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c0f29b43050>]}
+[0m15:20:08.044680 [debug] [MainThread]: Flushing usage events
+[0m15:22:06.902659 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a3b853bd5b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a3b8573dbe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a3b85cf7050>]}
+
+
+============================== 15:22:06.907522 | d0247f69-df3b-4399-ae76-203455456a57 ==============================
+[0m15:22:06.907522 [info ] [MainThread]: Running with dbt=1.8.4
+[0m15:22:06.907983 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/airflow/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/home/airflow/airflow-code/dags/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run --select CREDITS_DIM --profile Netflix --target dev', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:22:07.682969 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd0247f69-df3b-4399-ae76-203455456a57', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a3b72f93740>]}
+[0m15:22:07.744869 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd0247f69-df3b-4399-ae76-203455456a57', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a3b7213ea50>]}
+[0m15:22:07.745505 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m15:22:07.754473 [debug] [MainThread]: checksum: 0bc6b121b1c46d654809523bf93da25911faf6b2c73d978e3d08deb6e9c258fd, vars: {}, profile: Netflix, target: dev, version: 1.8.4
+[0m15:22:07.755043 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m15:22:07.755344 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd0247f69-df3b-4399-ae76-203455456a57', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a3b71fbc920>]}
+[0m15:22:08.556292 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.netflix_project.netflix.stage
+- models.netflix_project.netflix.dimension
+- models.netflix_project.netflix.fact
+[0m15:22:08.562515 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd0247f69-df3b-4399-ae76-203455456a57', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a3b71f32ba0>]}
+[0m15:22:08.609557 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd0247f69-df3b-4399-ae76-203455456a57', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a3b71db59d0>]}
+[0m15:22:08.609912 [info ] [MainThread]: Found 446 macros
+[0m15:22:08.610186 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd0247f69-df3b-4399-ae76-203455456a57', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a3b71edaf00>]}
+[0m15:22:08.612353 [warn ] [MainThread]: The selection criterion 'CREDITS_DIM' does not match any enabled nodes
+[0m15:22:08.613316 [info ] [MainThread]: 
+[0m15:22:08.613625 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m15:22:08.614029 [debug] [MainThread]: Command end result
+[0m15:22:08.632964 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.7790065, "process_user_time": 3.038175, "process_kernel_time": 0.205872, "process_mem_max_rss": "195896", "process_out_blocks": "2616", "process_in_blocks": "0"}
+[0m15:22:08.633404 [debug] [MainThread]: Command `dbt run` succeeded at 15:22:08.633314 after 1.78 seconds
+[0m15:22:08.633722 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a3b8541c950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a3b857c38c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a3b853bfe90>]}
+[0m15:22:08.633983 [debug] [MainThread]: Flushing usage events
+[0m15:22:58.048584 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dfaa2c16e40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dfaa201e3f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dfaa1f36240>]}
+
+
+============================== 15:22:58.051008 | b37a8bac-5497-4c4e-baad-9bbb4b7f27d7 ==============================
+[0m15:22:58.051008 [info ] [MainThread]: Running with dbt=1.8.4
+[0m15:22:58.052614 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/airflow/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/home/airflow/airflow-code/dags/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt run --select CREDITS_DIM --profile Netflix --target dev', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:22:58.895966 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b37a8bac-5497-4c4e-baad-9bbb4b7f27d7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dfaa3080d40>]}
+[0m15:22:58.956169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b37a8bac-5497-4c4e-baad-9bbb4b7f27d7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dfa8ebf05f0>]}
+[0m15:22:58.956843 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m15:22:58.966915 [debug] [MainThread]: checksum: 0bc6b121b1c46d654809523bf93da25911faf6b2c73d978e3d08deb6e9c258fd, vars: {}, profile: Netflix, target: dev, version: 1.8.4
+[0m15:22:59.008705 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m15:22:59.009080 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'b37a8bac-5497-4c4e-baad-9bbb4b7f27d7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dfaa251a450>]}
+[0m15:23:00.137762 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m15:23:00.138222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'b37a8bac-5497-4c4e-baad-9bbb4b7f27d7', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dfaa1b237d0>]}
+[0m15:23:00.431578 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b37a8bac-5497-4c4e-baad-9bbb4b7f27d7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dfa8e461dc0>]}
+[0m15:23:00.528389 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b37a8bac-5497-4c4e-baad-9bbb4b7f27d7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dfa8e406870>]}
+[0m15:23:00.528790 [info ] [MainThread]: Found 8 models, 4 data tests, 2 sources, 446 macros
+[0m15:23:00.529062 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b37a8bac-5497-4c4e-baad-9bbb4b7f27d7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dfa8e442000>]}
+[0m15:23:00.530303 [info ] [MainThread]: 
+[0m15:23:00.531916 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m15:23:00.532804 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_PROD'
+[0m15:23:00.547189 [debug] [ThreadPool]: Using snowflake connection "list_PROD"
+[0m15:23:00.547468 [debug] [ThreadPool]: On list_PROD: /* {"app": "dbt", "dbt_version": "1.8.4", "profile_name": "Netflix", "target_name": "dev", "connection_name": "list_PROD"} */
+show terse schemas in database PROD
+    limit 10000
+[0m15:23:00.547719 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:23:01.693201 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 1.145 seconds
+[0m15:23:01.694664 [debug] [ThreadPool]: On list_PROD: Close
+[0m15:23:02.053347 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_PROD, now list_PROD_DBT_TRANSFORM)
+[0m15:23:02.061043 [debug] [ThreadPool]: Using snowflake connection "list_PROD_DBT_TRANSFORM"
+[0m15:23:02.061349 [debug] [ThreadPool]: On list_PROD_DBT_TRANSFORM: /* {"app": "dbt", "dbt_version": "1.8.4", "profile_name": "Netflix", "target_name": "dev", "connection_name": "list_PROD_DBT_TRANSFORM"} */
+show objects in PROD.DBT_TRANSFORM limit 10000
+[0m15:23:02.061609 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:23:03.077790 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.016 seconds
+[0m15:23:03.079428 [debug] [ThreadPool]: On list_PROD_DBT_TRANSFORM: Close
+[0m15:23:03.433243 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b37a8bac-5497-4c4e-baad-9bbb4b7f27d7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dfa8e442000>]}
+[0m15:23:03.433783 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:23:03.434066 [info ] [MainThread]: 
+[0m15:23:03.439740 [debug] [Thread-1 (]: Began running node model.netflix_project.CREDITS_DIM
+[0m15:23:03.440205 [info ] [Thread-1 (]: 1 of 1 START sql table model DBT_TRANSFORM.CREDITS_DIM ......................... [RUN]
+[0m15:23:03.440615 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_PROD_DBT_TRANSFORM, now model.netflix_project.CREDITS_DIM)
+[0m15:23:03.440923 [debug] [Thread-1 (]: Began compiling node model.netflix_project.CREDITS_DIM
+[0m15:23:03.449522 [debug] [Thread-1 (]: Writing injected SQL for node "model.netflix_project.CREDITS_DIM"
+[0m15:23:03.450069 [debug] [Thread-1 (]: Began executing node model.netflix_project.CREDITS_DIM
+[0m15:23:03.468466 [debug] [Thread-1 (]: Using snowflake connection "model.netflix_project.CREDITS_DIM"
+[0m15:23:03.468799 [debug] [Thread-1 (]: On model.netflix_project.CREDITS_DIM: /* {"app": "dbt", "dbt_version": "1.8.4", "profile_name": "Netflix", "target_name": "dev", "node_id": "model.netflix_project.CREDITS_DIM"} */
+ALTER SESSION SET QUOTED_IDENTIFIERS_IGNORE_CASE = true
+[0m15:23:03.469055 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:23:04.457465 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.988 seconds
+[0m15:23:04.471130 [debug] [Thread-1 (]: Writing runtime sql for node "model.netflix_project.CREDITS_DIM"
+[0m15:23:04.471886 [debug] [Thread-1 (]: Using snowflake connection "model.netflix_project.CREDITS_DIM"
+[0m15:23:04.472208 [debug] [Thread-1 (]: On model.netflix_project.CREDITS_DIM: /* {"app": "dbt", "dbt_version": "1.8.4", "profile_name": "Netflix", "target_name": "dev", "node_id": "model.netflix_project.CREDITS_DIM"} */
+create or replace transient table PROD.DBT_TRANSFORM.CREDITS_DIM
+         as
+        (
+
+
+
+SELECT 
+* 
+FROM PROD.DBT_RAW.CREDITS
+WHERE ROLE IN ('ACTOR','DIRECTOR')
+        );
+[0m15:23:10.105157 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 5.633 seconds
+[0m15:23:10.128582 [debug] [Thread-1 (]: On model.netflix_project.CREDITS_DIM: Close
+[0m15:23:10.487446 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b37a8bac-5497-4c4e-baad-9bbb4b7f27d7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dfa8e897bf0>]}
+[0m15:23:10.488133 [info ] [Thread-1 (]: 1 of 1 OK created sql table model DBT_TRANSFORM.CREDITS_DIM .................... [[32mSUCCESS 1[0m in 7.05s]
+[0m15:23:10.490057 [debug] [Thread-1 (]: Finished running node model.netflix_project.CREDITS_DIM
+[0m15:23:10.492509 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:23:10.492801 [debug] [MainThread]: Connection 'model.netflix_project.CREDITS_DIM' was properly closed.
+[0m15:23:10.493046 [info ] [MainThread]: 
+[0m15:23:10.493304 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 9.96 seconds (9.96s).
+[0m15:23:10.493863 [debug] [MainThread]: Command end result
+[0m15:23:10.522240 [info ] [MainThread]: 
+[0m15:23:10.522615 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:23:10.522880 [info ] [MainThread]: 
+[0m15:23:10.523132 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m15:23:10.523838 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 12.528312, "process_user_time": 3.968334, "process_kernel_time": 0.206879, "process_mem_max_rss": "208980", "process_out_blocks": "2840", "process_in_blocks": "0"}
+[0m15:23:10.524267 [debug] [MainThread]: Command `dbt run` succeeded at 15:23:10.524169 after 12.53 seconds
+[0m15:23:10.524559 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dfaa1cf5070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dfaa1f83a40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dfa8db778f0>]}
+[0m15:23:10.524820 [debug] [MainThread]: Flushing usage events
+[0m15:24:22.740863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x742846692cc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x742846691f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7428462522a0>]}
+
+
+============================== 15:24:22.745500 | 3dd7ca46-e021-4171-8146-885939cf8323 ==============================
+[0m15:24:22.745500 [info ] [MainThread]: Running with dbt=1.8.4
+[0m15:24:22.745964 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/home/airflow/airflow-code/dags/logs', 'profiles_dir': '/home/airflow/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --models tag:DIMENSION --profile Netflix --target dev', 'send_anonymous_usage_stats': 'True'}
+[0m15:24:23.504280 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3dd7ca46-e021-4171-8146-885939cf8323', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74283377f380>]}
+[0m15:24:23.564456 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3dd7ca46-e021-4171-8146-885939cf8323', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x742845de5bb0>]}
+[0m15:24:23.565153 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m15:24:23.575073 [debug] [MainThread]: checksum: 0bc6b121b1c46d654809523bf93da25911faf6b2c73d978e3d08deb6e9c258fd, vars: {}, profile: Netflix, target: dev, version: 1.8.4
+[0m15:24:23.673578 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m15:24:23.674084 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '3dd7ca46-e021-4171-8146-885939cf8323', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x742831fa7530>]}
+[0m15:24:24.880045 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m15:24:24.880493 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '3dd7ca46-e021-4171-8146-885939cf8323', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x742831f63fb0>]}
+[0m15:24:25.141112 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3dd7ca46-e021-4171-8146-885939cf8323', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x742845655fa0>]}
+[0m15:24:25.246455 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3dd7ca46-e021-4171-8146-885939cf8323', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x742831b82c90>]}
+[0m15:24:25.246938 [info ] [MainThread]: Found 8 models, 5 data tests, 2 sources, 446 macros
+[0m15:24:25.247260 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3dd7ca46-e021-4171-8146-885939cf8323', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x742831b57170>]}
+[0m15:24:25.249802 [info ] [MainThread]: 
+[0m15:24:25.250291 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m15:24:25.253907 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_PROD'
+[0m15:24:25.267571 [debug] [ThreadPool]: Using snowflake connection "list_PROD"
+[0m15:24:25.267853 [debug] [ThreadPool]: On list_PROD: /* {"app": "dbt", "dbt_version": "1.8.4", "profile_name": "Netflix", "target_name": "dev", "connection_name": "list_PROD"} */
+show terse schemas in database PROD
+    limit 10000
+[0m15:24:25.268087 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:24:26.380896 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 1.113 seconds
+[0m15:24:26.382379 [debug] [ThreadPool]: On list_PROD: Close
+[0m15:24:26.741235 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_PROD_DBT_TRANSFORM'
+[0m15:24:26.750578 [debug] [ThreadPool]: Using snowflake connection "list_PROD_DBT_TRANSFORM"
+[0m15:24:26.750907 [debug] [ThreadPool]: On list_PROD_DBT_TRANSFORM: /* {"app": "dbt", "dbt_version": "1.8.4", "profile_name": "Netflix", "target_name": "dev", "connection_name": "list_PROD_DBT_TRANSFORM"} */
+show objects in PROD.DBT_TRANSFORM limit 10000
+[0m15:24:26.751140 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:24:27.761516 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.010 seconds
+[0m15:24:27.763193 [debug] [ThreadPool]: On list_PROD_DBT_TRANSFORM: Close
+[0m15:24:28.116854 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3dd7ca46-e021-4171-8146-885939cf8323', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7428320ae000>]}
+[0m15:24:28.117376 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:24:28.117703 [info ] [MainThread]: 
+[0m15:24:28.121743 [debug] [Thread-1 (]: Began running node model.netflix_project.CREDITS_DIM
+[0m15:24:28.122571 [debug] [Thread-2 (]: Began running node model.netflix_project.SCORES_VOTES_DIM
+[0m15:24:28.123353 [debug] [Thread-3 (]: Began running node model.netflix_project.SHOW_DETAILS_DIM
+[0m15:24:28.122212 [info ] [Thread-1 (]: 1 of 3 START sql table model DBT_TRANSFORM.CREDITS_DIM ......................... [RUN]
+[0m15:24:28.124193 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_PROD_DBT_TRANSFORM, now model.netflix_project.CREDITS_DIM)
+[0m15:24:28.124503 [debug] [Thread-1 (]: Began compiling node model.netflix_project.CREDITS_DIM
+[0m15:24:28.123043 [info ] [Thread-2 (]: 2 of 3 START sql table model DBT_TRANSFORM.SCORES_VOTES_DIM .................... [RUN]
+[0m15:24:28.131220 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_PROD, now model.netflix_project.SCORES_VOTES_DIM)
+[0m15:24:28.131574 [debug] [Thread-2 (]: Began compiling node model.netflix_project.SCORES_VOTES_DIM
+[0m15:24:28.133127 [debug] [Thread-1 (]: Writing injected SQL for node "model.netflix_project.CREDITS_DIM"
+[0m15:24:28.137185 [debug] [Thread-2 (]: Writing injected SQL for node "model.netflix_project.SCORES_VOTES_DIM"
+[0m15:24:28.123848 [info ] [Thread-3 (]: 3 of 3 START sql table model DBT_TRANSFORM.SHOW_DETAILS_DIM .................... [RUN]
+[0m15:24:28.140078 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.netflix_project.SHOW_DETAILS_DIM'
+[0m15:24:28.140371 [debug] [Thread-3 (]: Began compiling node model.netflix_project.SHOW_DETAILS_DIM
+[0m15:24:28.139382 [debug] [Thread-1 (]: Began executing node model.netflix_project.CREDITS_DIM
+[0m15:24:28.143726 [debug] [Thread-3 (]: Writing injected SQL for node "model.netflix_project.SHOW_DETAILS_DIM"
+[0m15:24:28.154749 [debug] [Thread-2 (]: Began executing node model.netflix_project.SCORES_VOTES_DIM
+[0m15:24:28.158562 [debug] [Thread-1 (]: Using snowflake connection "model.netflix_project.CREDITS_DIM"
+[0m15:24:28.160164 [debug] [Thread-3 (]: Began executing node model.netflix_project.SHOW_DETAILS_DIM
+[0m15:24:28.161973 [debug] [Thread-2 (]: Using snowflake connection "model.netflix_project.SCORES_VOTES_DIM"
+[0m15:24:28.162496 [debug] [Thread-1 (]: On model.netflix_project.CREDITS_DIM: /* {"app": "dbt", "dbt_version": "1.8.4", "profile_name": "Netflix", "target_name": "dev", "node_id": "model.netflix_project.CREDITS_DIM"} */
+ALTER SESSION SET QUOTED_IDENTIFIERS_IGNORE_CASE = true
+[0m15:24:28.164441 [debug] [Thread-3 (]: Using snowflake connection "model.netflix_project.SHOW_DETAILS_DIM"
+[0m15:24:28.164939 [debug] [Thread-2 (]: On model.netflix_project.SCORES_VOTES_DIM: /* {"app": "dbt", "dbt_version": "1.8.4", "profile_name": "Netflix", "target_name": "dev", "node_id": "model.netflix_project.SCORES_VOTES_DIM"} */
+ALTER SESSION SET QUOTED_IDENTIFIERS_IGNORE_CASE = true
+[0m15:24:28.165431 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:24:28.165891 [debug] [Thread-3 (]: On model.netflix_project.SHOW_DETAILS_DIM: /* {"app": "dbt", "dbt_version": "1.8.4", "profile_name": "Netflix", "target_name": "dev", "node_id": "model.netflix_project.SHOW_DETAILS_DIM"} */
+ALTER SESSION SET QUOTED_IDENTIFIERS_IGNORE_CASE = true
+[0m15:24:28.170292 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m15:24:28.166382 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:24:29.124442 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.958 seconds
+[0m15:24:29.138190 [debug] [Thread-2 (]: Writing runtime sql for node "model.netflix_project.SCORES_VOTES_DIM"
+[0m15:24:29.140117 [debug] [Thread-2 (]: Using snowflake connection "model.netflix_project.SCORES_VOTES_DIM"
+[0m15:24:29.140431 [debug] [Thread-2 (]: On model.netflix_project.SCORES_VOTES_DIM: /* {"app": "dbt", "dbt_version": "1.8.4", "profile_name": "Netflix", "target_name": "dev", "node_id": "model.netflix_project.SCORES_VOTES_DIM"} */
+create or replace transient table PROD.DBT_TRANSFORM.SCORES_VOTES_DIM
+         as
+        (
+
+
+
+SELECT
+ID
+,IMDB_ID
+,IMDB_SCORE
+,IMDB_VOTES
+,TMDB_POPULARITY
+,TMDB_SCORE
+FROM
+PROD.DBT_RAW.TITLES
+        );
+[0m15:24:29.181020 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.011 seconds
+[0m15:24:29.182096 [debug] [Thread-3 (]: Writing runtime sql for node "model.netflix_project.SHOW_DETAILS_DIM"
+[0m15:24:29.183925 [debug] [Thread-3 (]: Using snowflake connection "model.netflix_project.SHOW_DETAILS_DIM"
+[0m15:24:29.184231 [debug] [Thread-3 (]: On model.netflix_project.SHOW_DETAILS_DIM: /* {"app": "dbt", "dbt_version": "1.8.4", "profile_name": "Netflix", "target_name": "dev", "node_id": "model.netflix_project.SHOW_DETAILS_DIM"} */
+create or replace transient table PROD.DBT_TRANSFORM.SHOW_DETAILS_DIM
+         as
+        (
+
+
+
+SELECT
+ID
+,TITLE
+,TYPE
+,DESCRIPTION
+,RELEASE_YEAR
+,AGE_CERTIFICATION
+,RUNTIME
+,GENRES
+,PRODUCTION_COUNTRIES
+,SEASONS
+FROM
+PROD.DBT_RAW.TITLES
+        );
+[0m15:24:29.212248 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.047 seconds
+[0m15:24:29.213277 [debug] [Thread-1 (]: Writing runtime sql for node "model.netflix_project.CREDITS_DIM"
+[0m15:24:29.213897 [debug] [Thread-1 (]: Using snowflake connection "model.netflix_project.CREDITS_DIM"
+[0m15:24:29.214184 [debug] [Thread-1 (]: On model.netflix_project.CREDITS_DIM: /* {"app": "dbt", "dbt_version": "1.8.4", "profile_name": "Netflix", "target_name": "dev", "node_id": "model.netflix_project.CREDITS_DIM"} */
+create or replace transient table PROD.DBT_TRANSFORM.CREDITS_DIM
+         as
+        (
+
+
+
+SELECT 
+* 
+FROM PROD.DBT_RAW.CREDITS
+WHERE ROLE IN ('ACTOR','DIRECTOR')
+        );
+[0m15:24:31.380772 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 2.240 seconds
+[0m15:24:31.382729 [debug] [Thread-2 (]: Using snowflake connection "model.netflix_project.SCORES_VOTES_DIM"
+[0m15:24:31.383079 [debug] [Thread-2 (]: On model.netflix_project.SCORES_VOTES_DIM: /* {"app": "dbt", "dbt_version": "1.8.4", "profile_name": "Netflix", "target_name": "dev", "node_id": "model.netflix_project.SCORES_VOTES_DIM"} */
+GRANT SELECT ON TABLE PROD.DBT_TRANSFORM.SCORES_VOTES_DIM TO ROLE TEST_DBT_ROLE
+[0m15:24:31.609003 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01b5f37c-3201-286a-0009-930e0002001a
+[0m15:24:31.609387 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (02000): SQL compilation error:
+Role 'TEST_DBT_ROLE' does not exist or not authorized.
+[0m15:24:31.609774 [debug] [Thread-2 (]: On model.netflix_project.SCORES_VOTES_DIM: Close
+[0m15:24:31.962792 [debug] [Thread-2 (]: Database Error in model SCORES_VOTES_DIM (../../dbt-code/models/netflix/stage/SCORES_VOTES_DIM.sql)
+  002003 (02000): SQL compilation error:
+  Role 'TEST_DBT_ROLE' does not exist or not authorized.
+  compiled Code at target/run/netflix_project/../../dbt-code/models/netflix/stage/SCORES_VOTES_DIM.sql
+[0m15:24:31.964236 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3dd7ca46-e021-4171-8146-885939cf8323', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x742845de7620>]}
+[0m15:24:31.964835 [error] [Thread-2 (]: 2 of 3 ERROR creating sql table model DBT_TRANSFORM.SCORES_VOTES_DIM ........... [[31mERROR[0m in 3.83s]
+[0m15:24:31.967213 [debug] [Thread-2 (]: Finished running node model.netflix_project.SCORES_VOTES_DIM
+[0m15:24:34.114667 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 4.930 seconds
+[0m15:24:34.136478 [debug] [Thread-3 (]: On model.netflix_project.SHOW_DETAILS_DIM: Close
+[0m15:24:34.501489 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3dd7ca46-e021-4171-8146-885939cf8323', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74283234bf20>]}
+[0m15:24:34.502180 [info ] [Thread-3 (]: 3 of 3 OK created sql table model DBT_TRANSFORM.SHOW_DETAILS_DIM ............... [[32mSUCCESS 1[0m in 6.36s]
+[0m15:24:34.502711 [debug] [Thread-3 (]: Finished running node model.netflix_project.SHOW_DETAILS_DIM
+[0m15:24:36.717587 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 7.503 seconds
+[0m15:24:36.722050 [debug] [Thread-1 (]: On model.netflix_project.CREDITS_DIM: Close
+[0m15:24:37.093312 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3dd7ca46-e021-4171-8146-885939cf8323', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x742831f65a00>]}
+[0m15:24:37.094016 [info ] [Thread-1 (]: 1 of 3 OK created sql table model DBT_TRANSFORM.CREDITS_DIM .................... [[32mSUCCESS 1[0m in 8.97s]
+[0m15:24:37.095709 [debug] [Thread-1 (]: Finished running node model.netflix_project.CREDITS_DIM
+[0m15:24:37.097167 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:24:37.097410 [debug] [MainThread]: Connection 'model.netflix_project.SCORES_VOTES_DIM' was properly closed.
+[0m15:24:37.097628 [debug] [MainThread]: Connection 'model.netflix_project.CREDITS_DIM' was properly closed.
+[0m15:24:37.097807 [debug] [MainThread]: Connection 'model.netflix_project.SHOW_DETAILS_DIM' was properly closed.
+[0m15:24:37.098067 [info ] [MainThread]: 
+[0m15:24:37.098336 [info ] [MainThread]: Finished running 3 table models in 0 hours 0 minutes and 11.85 seconds (11.85s).
+[0m15:24:37.099131 [debug] [MainThread]: Command end result
+[0m15:24:37.125573 [info ] [MainThread]: 
+[0m15:24:37.125907 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m15:24:37.126167 [info ] [MainThread]: 
+[0m15:24:37.126884 [error] [MainThread]:   Database Error in model SCORES_VOTES_DIM (../../dbt-code/models/netflix/stage/SCORES_VOTES_DIM.sql)
+  002003 (02000): SQL compilation error:
+  Role 'TEST_DBT_ROLE' does not exist or not authorized.
+  compiled Code at target/run/netflix_project/../../dbt-code/models/netflix/stage/SCORES_VOTES_DIM.sql
+[0m15:24:37.127182 [info ] [MainThread]: 
+[0m15:24:37.127458 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 TOTAL=3
+[0m15:24:37.128148 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 14.43776, "process_user_time": 4.223316, "process_kernel_time": 0.23595, "process_mem_max_rss": "213788", "process_in_blocks": "64", "process_out_blocks": "2912", "command_success": false}
+[0m15:24:37.128570 [debug] [MainThread]: Command `dbt run` failed at 15:24:37.128469 after 14.44 seconds
+[0m15:24:37.128847 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x742846430140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x742845a78620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7428325b5e20>]}
+[0m15:24:37.129137 [debug] [MainThread]: Flushing usage events
